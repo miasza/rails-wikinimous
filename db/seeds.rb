@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Articles.delete_all
+articles = []
+10.times do
+ articles << Article.create( title: "#{Faker::Beer.brand}", content: "#{Faker::Beer.brand}")
+end
